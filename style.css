@@ -1,0 +1,191 @@
+:root {
+    --pink: hsl(322, 100%, 66%);
+    --very-pale-cyan: hsl(193, 100%, 96%);
+    --very-dark-cyan: hsl(192, 100%, 9%);
+    --grayish-blue: hsl(208, 11%, 55%);
+}
+
+:root{
+    --violet: hsl(257, 40%, 49%);
+    --soft-magenta: hsl(300, 69%, 71%);
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+  }
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+
+  h1, h2, h3 {
+    line-height: 1.1;
+  }
+
+  /* styling */
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+.top {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    background-image: url("./images/bg-hero-desktop.svg");
+    background-color: var(--very-pale-cyan);
+}
+
+.my-button {
+    background-color: var(--pink) !important;
+    border: none !important;
+    color: white ;
+    border-radius: 20px !important;
+    font-family: 'Open Sans', sans-serif !important;
+    font-weight: 400 !important;
+    font-size: 1rem !important;
+}
+.my-button:hover {
+    background-color: hsl(322, 60%, 66%) !important;
+}
+h2 {
+    font-size: 2rem !important;
+}
+
+.main-card {
+    background-color: white !important;
+    font-weight: 700 !important;
+    font-family: 'Open Sans', sans-serif !important;
+}
+.footer-main {
+  background-color: var(--very-dark-cyan);
+  color: var(--grayish-blue);
+  padding-bottom: 5%;
+}
+.logo {
+  padding-top: 10%;
+  margin-left: 6%;
+  margin-bottom: 3%;
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(314deg) brightness(104%) contrast(102%);
+}
+.three-boxes{
+  display: flex;
+  width: 100%;
+  gap: 10%;
+}
+.first-col {
+  width: 30%;
+  margin-left: 6%;
+}
+.icon-paragraph {
+  display: flex;
+  gap: 5%;
+  margin-bottom: 0%;
+}
+.icon-paragraph>img {
+  width: 20px;
+  height: 20px;
+  margin-top:1% ;
+}
+li {
+  list-style-type: none;
+  margin-bottom: 10%;
+  text-decoration: none;
+}
+li > a:link { 
+  text-decoration: none;
+  color: var(--grayish-blue);
+ }
+
+a:visited { text-decoration: none; }
+
+a:hover { 
+  text-decoration: none;
+  color: hsl(208, 3%, 55%); 
+}
+i {
+  color: white;
+  font-size: 20px;
+  border: 10px solid var(--very-dark-cyan);
+  border-radius: 50%;
+}
+.ready-to-build {
+  position: relative;
+  top: 90px;
+}
+
+a:active { text-decoration: none; }
+
+
+@media (max-width: 1000px) {
+  .main-model {
+    flex-direction: column-reverse;
+  }
+  .my-button {
+    width: 90%;
+  }
+  main {
+    text-align: center;
+  }
+  .ready-to-build {
+    width: 90%;
+  }
+  .footer-main {
+    flex-direction: column;
+  }
+  .three-boxes {
+    flex-direction: column;
+  }
+  .first-col {
+    width: 80vw;
+    text-align: left;
+  }
+  ul {
+    text-align: left;
+    margin-left: 6%;
+    margin-bottom: 0;
+  }
+  li {
+    margin-bottom: 3%;
+  }
+  .second-col {
+    margin-top: 5%;
+  }
+  .logo {
+    padding-top: 30%;
+  }
+}
